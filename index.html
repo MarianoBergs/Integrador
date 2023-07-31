@@ -1,24 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-   
-
-    <title>Integrador</title>
-
-
-</head>
-
-<body>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Agile</title>
+  <link rel="stylesheet" href="./css/estilos.css">
+  </head>
+  <body>
+    <header>
+      <h1>Sistema Agile</h1>
+    </header>
     
+    <main>
+      <div class="carousel">
+        <div class="slide">
+          <img src="https://static.hosteltur.com/app/public/uploads/img/articles/2016/12/01/L_5b150803c9726_02._Metodologya_Agile_en_las_TI_hoteleras.jpg" alt="Imagen 1">
+          <div>
+
+            <button class="centerButton" onclick="showPopup('Las ceremonias en el contexto de metodologías ágiles, como Scrum, son eventos planificados que se llevan a cabo durante el desarrollo de un proyecto para facilitar la colaboración, la comunicación y la eficiencia del equipo. Estas ceremonias proporcionan una estructura y ritmo al proceso de trabajo y ayudan a mantener el enfoque en los objetivos del proyecto.')" >Ceremonias Agile</button>
+
+          </div>
+          
+          <div class="buttons">
+            
+            <button class="leftButton" onclick="showPopup('Una Daily Meeting, también conocida como Daily Standup o Scrum Daily, es una reunión breve y diaria que se realiza en el marco de trabajo ágil, como Scrum. En esta reunión, el equipo de desarrollo se reúne para compartir actualizaciones sobre el progreso del trabajo y coordinar las tareas para el día. La Daily Meeting generalmente sigue un formato estructurado y rápido.')">Daily Meeting</button>
+            <button class="centerButton" onclick="showPopup('El Sprint Planning, o Planificación de Sprint, es una reunión esencial en el marco de trabajo ágil, como Scrum. Se realiza al comienzo de cada Sprint y su objetivo principal es establecer los objetivos y definir las tareas que se abordarán durante el Sprint. El Sprint Planning garantiza que el equipo comprenda claramente qué se va a trabajar en el Sprint y cómo se medirá el éxito. Al final de la reunión, el equipo debe tener un plan claro y realista para alcanzar el objetivo del Sprint, lo que permite un desarrollo más enfocado y efectivo durante la iteración.')">Sprint Planning</button>
+            <button class="rightButton" onclick="showPopup('La Planificacion Tactica en el marco ágil, el equipo identifica las historias de usuario o tareas que abordarán durante el Sprint, establece las prioridades y asigna estimaciones de tiempo para cada una. También se define cómo se llevará a cabo el trabajo, se distribuyen las tareas entre los miembros del equipo y se acuerda cómo se medirá el progreso y el éxito durante el Sprint.')">Planificacion tactica</button>
+          </div>
+          <div>
+            <button class="leftButton" onclick="showPopup('La retrospectiva en el marco ágil es una reunión periódica y estructurada que se realiza al final de cada Sprint, en metodologías como Scrum. Su objetivo principal es que el equipo reflexione sobre el trabajo realizado durante el Sprint y encuentre oportunidades para mejorar su proceso y su colaboración.')">Retrospectiva</button>
+            <button class="centerButton" onclick="showPopup('La Sprint Review, también conocida como Revisión de Sprint, es una reunión que se lleva a cabo al final de cada Sprint en el marco ágil, como Scrum. En esta reunión, el equipo de desarrollo muestra y presenta los resultados del trabajo completado durante el Sprint a los stakeholders, el Product Owner y otros miembros interesados del equipo.')">Sprint Review</button>
+            <button class="rightButton" onclick="showPopup('El refinamiento en el marco ágil, también conocido como Refinamiento del Backlog o Backlog Refinement, es una práctica que forma parte del proceso de planificación y gestión de proyectos ágiles, especialmente en Scrum. Consiste en un proceso periódico en el que el equipo de desarrollo trabaja junto con el Product Owner para revisar, detallar y mejorar los elementos del Backlog del Producto.')">Refinamiento</button>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://d1pqtfnbav8y3g.cloudfront.net/wp-content/uploads/2019/03/2.3.-Equipos-a%CC%81gilesshutterstock_443392198.jpg" alt="Imagen 2">
+          
+          <div>
+
+            <button class="centerButton" onclick="showPopup('Un equipo ágil es un grupo de profesionales multidisciplinarios que trabajan juntos de manera colaborativa para desarrollar productos o servicios de manera iterativa e incremental, siguiendo los principios y valores de las metodologías ágiles. Estos equipos son característicos de enfoques como Scrum, Kanban, Extreme Programming (XP) y otros marcos ágiles.')">Eqipo Agile</button>
+
+          </div>
+          
+          <div class="buttons">
+            <button class="leftButton" onclick="showPopup('El Product Owner es el responsable de maximizar el valor del producto y gestionar el Backlog del Producto en el marco de desarrollo ágil, como Scrum. Define requisitos, prioriza tareas, toma decisiones y mantiene una comunicación efectiva con stakeholders y el equipo de desarrollo.')">Product Owner</button>
+            <button class="centerButton" onclick="showPopup('Un Business Analyst es un profesional encargado de analizar y entender las necesidades del negocio para traducirlas en soluciones técnicas y funcionales. Facilita la comunicación entre el equipo de negocio y desarrollo y contribuye a la mejora continua de procesos empresariales.')">Bussiness Analyst</button>
+            <button class="rightButton" onclick="showPopup('El Scrum Master es un miembro esencial del equipo en el marco de trabajo ágil Scrum. Su función principal es actuar como un líder facilitador que guía al equipo de desarrollo y alienta la adopción efectiva de Scrum. El Scrum Master trabaja en estrecha colaboración con el Product Owner y el equipo de desarrollo para garantizar una entrega exitosa del producto.')">Scrum Master</button>
+          </div>
+
+          <div>
+
+            <button class="centerButton" onclick="showPopup('Un equipo técnico está compuesto por profesionales especializados en distintas áreas de tecnología, trabajando en conjunto para alcanzar objetivos específicos relacionados con proyectos, desarrollo de productos o servicios digitales. Este equipo puede incluir ingenieros de software, diseñadores UX/UI, analistas de datos, especialistas en seguridad informática, administradores de sistemas, entre otros roles técnicos.')">Eqipo tecnico</button>
+
+          </div>
+
+          <div>
+
+            <button class="leftButton" onclick="showPopup('Un Lider Tecnico es un profesional altamente experimentado y con habilidades técnicas sobresalientes que guía y dirige a un equipo de desarrolladores y especialistas técnicos. Su función principal es liderar el diseño y la implementación de soluciones tecnológicas, asegurando la calidad del trabajo y la alineación con los objetivos del proyecto y la visión de la empresa.')">Lider Tecnico</button>
+            <button class="centerButton" onclick="showPopup('Un desarrollador Frontend es un profesional especializado en la creación y diseño de la interfaz de usuario de aplicaciones y sitios web. Su función principal es transformar el diseño y las especificaciones del diseñador o el equipo de diseño en código funcional, que los usuarios puedan ver y con el que puedan interactuar directamente.')">Desarrollador Frontend</button>
+            <button class="rightButton" onclick="showPopup('Un desarrollador Backend es un profesional especializado en la construcción y gestión de la lógica y la infraestructura que permite que las aplicaciones y sitios web funcionen de manera eficiente. A diferencia del desarrollador Frontend, el desarrollador Backend se enfoca en la parte no visible del producto, es decir, en el servidor, la base de datos y la lógica de negocio.')">Desarrollador Backend</button>
+            <button class="leftButton" onclick="showPopup('Un Administrador de Base de Datos (DBA) es responsable de gestionar y mantener bases de datos de forma segura y eficiente, asegurando su integridad, disponibilidad y rendimiento óptimo. Realiza tareas de diseño, seguridad, copias de seguridad, optimización y resolución de problemas en la base de datos.')">Administrador de base de datos</button>
+          </div>
+          <div>
+
+            <button class="centerButton" onclick="showPopup('El QA es responsable de diseñar planes de pruebas, ejecutar pruebas funcionales y de rendimiento, reportar y documentar los problemas encontrados, y colaborar con el equipo de desarrollo para corregir y verificar que los errores sean resueltos. Además, garantiza que las nuevas funcionalidades o cambios no afecten el funcionamiento de otras partes del software.')">Quality Analysis</button>
+
+          </div>
+
+            
+
+          <div>
+            <button class="leftButton" onclick="showPopup('El QA Manual, también conocido como Pruebas de Software Manuales, es un enfoque de control de calidad en el desarrollo de software que se basa en la intervención humana para identificar errores y verificar el correcto funcionamiento del producto. En lugar de utilizar herramientas automatizadas, los testers ejecutan las pruebas de forma manual, simulando el comportamiento de los usuarios finales para evaluar la funcionalidad y usabilidad del software.')">QA Manual</button>
+            <button class="centerButton" onclick="showPopup('QA Automation (Automatización de Pruebas de Software) es un enfoque de control de calidad en el desarrollo de software que utiliza herramientas y scripts para ejecutar pruebas de forma automatizada, sin intervención humana directa. Estas pruebas automatizadas son diseñadas para simular el comportamiento de los usuarios y verificar el funcionamiento del software de manera rápida y repetitiva.')">QA Automation</button>
+
+          </div>
+          
+
+        </div>
+        <div class="slide">
+          <img src="https://www.itmplatform.com/lib/uploads/47531890_s-1.jpg" alt="Imagen 3">
+          <div class="buttons">
+            <button class="leftButton" onclick="showPopup('El Sprint Backlog es una parte esencial del marco ágil Scrum y se refiere a la lista de tareas y elementos del Backlog del Producto que el equipo de desarrollo se compromete a completar durante un Sprint específico. Específicamente, representa el conjunto de funcionalidades, historias de usuario o elementos del Backlog del Producto seleccionados para ser abordados durante el período de tiempo definido para el Sprint.')">Sprint Backlog</button>
+            <button class="centerButton" onclick="showPopup('El Product Backlog es una lista priorizada de todas las funcionalidades, requisitos, mejoras y elementos necesarios para desarrollar y mejorar un producto. Es una parte fundamental de la metodología ágil Scrum y sirve como una herramienta de planificación y gestión para el equipo de desarrollo y el Product Owner.')">Product Backlog</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button class="leftButton" onclick="prevSlide()">Anterior</button>
+        <button class="rightButton" onclick="nextSlide()">Siguiente</button>
+      </div>
+    </main>
+  
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+      <div class="popup-content" id="popupContent">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <p id="popupText">Contenido del pop-up</p>
+      </div>
+    </div>
 
 
-</body>
 
-</html>
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const content = document.querySelector('.content');
+      const popupOverlay = document.getElementById('popupOverlay');
+      const popup = document.getElementById('popup');
+      const popupContent = document.getElementById('popupContent');
+      const popupText = document.getElementById('popupText');
+  
+      function showPopup(text) {
+        popupText.textContent = text;
+        popupOverlay.style.display = 'block';
+        popup.style.display = 'block';
+      }
+  
+      function closePopup() {
+        popupOverlay.style.display = 'none';
+        popup.style.display = 'none';
+      }
+  
+      function updateContent(index) {
+        currentIndex = index;
+        content.innerHTML = `<p>Contenido relacionado con la imagen ${currentIndex + 1}</p>`;
+      }
+  
+      function updateCarousel() {
+        for (let i = 0; i < slides.length; i++) {
+          if (i === currentIndex) {
+            slides[i].style.display = 'block';
+          } else {
+            slides[i].style.display = 'none';
+          }
+        }
+      }
+  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+        updateContent(currentIndex);
+      }
+  
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+        updateContent(currentIndex);
+      }
+  
+      // Iniciar carrusel y contenido
+      updateCarousel();
+      updateContent(currentIndex);
+    </script>
+  </body>
+  </html>
