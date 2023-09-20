@@ -3,11 +3,31 @@
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
 }
 
 
+div {
 
+    background-color:azure;
+}
+
+h1 {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(7, 34, 122, 0.781);
+    text-align: center;
+
+}
+
+iframe {
+
+    margin-left: 28%;
+    margin-top: 5%;
+
+
+}
 
 .slide {
     position: relative;
