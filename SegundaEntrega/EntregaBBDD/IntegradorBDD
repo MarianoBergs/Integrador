@@ -1,0 +1,81 @@
+CREATE DATABASE INTEGRADOR;
+
+CREATE TABLE Tipos_Bicicleta (
+    Tipo_ID INT PRIMARY KEY,
+    Nombre_Tipo VARCHAR(50)
+);
+
+CREATE TABLE Bicicletas (
+    BicicletaID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    Modelo VARCHAR(50) NOT NULL,
+    Marca VARCHAR(50) NOT NULL,
+    Color VARCHAR(50) NOT NULL,
+    ANO_FAB INT UNSIGNED,
+    TipoBicicletaID INT,
+    FOREIGN KEY (TipoBicicletaID) REFERENCES Tipos_Bicicleta(Tipo_ID)
+);
+
+CREATE TABLE Clientes (
+    ClienteID INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Direccion VARCHAR(50) NOT NULL,
+    Telefono INT,
+    DNI INT UNSIGNED UNIQUE,
+    BicicletaID INT UNSIGNED,
+    FOREIGN KEY (BicicletaID) REFERENCES Bicicletas(BicicletaID)
+);
+
+INSERT INTO TIPOS_BICICLETA (`Tipo_ID`, `Nombre_Tipo`) 
+VALUES 
+(1, 'Montaña'),
+(2,	'Paseo'),
+(3, 'Carrera');
+
+INSERT INTO BICICLETAS (`BicicletaID`, `Modelo`, `Marca`, `Color`, `TipoBicicletaID`, `ANO_FAB`) 
+VALUES 
+(1, 'Specialized', 'Rockhopper 29', 'Rojo', 2, 2020),
+(2,	'Scott', 'Aspect 960', 'Verde', 3, 2023),
+(3, 'Trek',	'Marlin 5',	'Negra', 3, 2022),
+(4, 'Giant', 'Talon 4', 'Azul',	1, 2022);
+
+INSERT INTO CLIENTES (`ClienteID`, `Nombre`, `Apellido`, `Direccion`, `Telefono`, `DNI`, `BicicletaID`) 
+VALUES 
+(1, 'ADRIANA', 'ALANIS', 'XX AL 00', 261000000, 40000000, 1),
+(2, 'MARIANO', 'BERGAS', 'YY AL 11', 261000001, 40000001, 2),
+(3, 'PAULA', 'RUGGIERI','ZZ AL 22',  261000002, 40000002, 3);
+
+SELECT
+    Clientes.Nombre AS Nombre_Cliente,
+    Clientes.Apellido AS Apellido_Cliente,
+    Bicicleta.Marca AS Marca_Bicicleta,
+    Bicicleta.Modelo AS Modelo_Bicicleta,
+    Tipos_Bicicleta.Nombre_Tipo AS Tipo_Bicicleta
+FROM
+    Clientes
+JOIN
+    Bicicletas AS Bicicleta ON Clientes.BicicletaID = Bicicleta.BicicletaID
+JOIN
+    Tipos_Bicicleta AS Tipos_Bicicleta ON Bicicleta.TipoBicicletaID = Tipos_Bicicleta.Tipo_ID;
+
+
+/*Tabla Bicicletas y Tipos_Bicicleta:
+
+Modalidad: En este caso, la modalidad se refiere a la relación entre una bicicleta y un tipo de bicicleta. 
+Cada bicicleta en la tabla Bicicletas está relacionada con exactamente un tipo de bicicleta en la tabla 
+Tipos_Bicicleta a través de la columna TipoBicicletaID. Esto establece una relación de "uno a uno" (1:1) 
+entre una bicicleta y su tipo. Cada bicicleta tiene un tipo específico, y cada tipo está asociado a una 
+bicicleta específica.
+Cardinalidad: La cardinalidad es "uno a uno" (1:1). Cada bicicleta está asociada a un solo tipo de bicicleta y cada tipo de bicicleta está 
+asociado a una sola bicicleta.
+
+
+Tabla Clientes y Bicicletas:
+
+Modalidad: La modalidad aquí se refiere a la relación entre un cliente y una bicicleta. Cada cliente en la
+tabla Clientes puede estar relacionado con cero, una o varias bicicletas en la tabla Bicicletas, ya que la 
+columna BicicletaID en la tabla Clientes es una clave externa que hace referencia a la columna BicicletaID en 
+la tabla Bicicletas. Por lo tanto, la modalidad es "uno a muchos" (1:N), lo que significa que un cliente 
+puede tener varias bicicletas, pero cada bicicleta está asociada a un solo cliente.
+Cardinalidad: La cardinalidad es "uno a muchos" (1:N). Cada cliente puede tener cero, una o varias 
+bicicletas, pero cada bicicleta está asociada a un solo cliente.*/
