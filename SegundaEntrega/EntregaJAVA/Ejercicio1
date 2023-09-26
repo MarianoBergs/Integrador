@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Calificacion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese una nota: ");
+        int nota = scanner.nextInt();
+
+        if (nota >= 0 && nota <= 3) {
+            System.out.println("Nota: " + nota);
+            System.out.println("Insuficiente");
+        } else if (nota == 4) {
+            System.out.println("Nota: " + nota);
+            System.out.println("Suficiente");
+        } else if (nota == 5 || nota == 6) {
+            System.out.println("Nota: " + nota);
+            System.out.println("Bien");
+        } else if (nota == 7 || nota == 8) {
+            System.out.println("Nota: " + nota);
+            System.out.println("Notable");
+        } else if (nota == 9 || nota == 10) {
+            System.out.println("Nota: " + nota);
+            System.out.println("Sobresaliente");
+        } else {
+            System.out.println("Nota no válida. Debe estar en el rango de 0 a 10.");
+        }
+
+        scanner.close();
+    }
+}

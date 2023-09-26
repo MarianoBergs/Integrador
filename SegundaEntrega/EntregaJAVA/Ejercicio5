@@ -1,0 +1,55 @@
+package main;
+import java.util.Scanner;
+
+public class Sueldos {
+	
+    public static void main(String[] args) {
+    	
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el número de sueldos a ingresar: ");
+        
+        int n = scanner.nextInt();
+
+        if (n <= 0) {
+            
+        	System.out.println("El número de sueldos debe ser mayor que cero.");
+            
+            scanner.close();
+            
+            return;
+        }
+
+        double sueldoMasAlto = Double.MIN_VALUE;
+        
+        double sueldoMasBajo = Double.MAX_VALUE;
+        
+        double sumaSueldos = 0;
+
+        
+        for (int i = 1; i <= n; i++) {
+        	
+            System.out.print("Ingrese el sueldo " + i + ": ");
+            
+            double sueldo = scanner.nextDouble();
+
+            sueldoMasAlto = Math.max(sueldoMasAlto, sueldo);
+            
+            sueldoMasBajo = Math.min(sueldoMasBajo, sueldo);
+            
+            sumaSueldos += sueldo;
+        }
+
+
+        double promedioSueldos = sumaSueldos / n;
+
+
+        System.out.println("Sueldo más alto: " + sueldoMasAlto);
+        
+        System.out.println("Sueldo más bajo: " + sueldoMasBajo);
+        
+        System.out.println("Promedio de sueldos: " + promedioSueldos);
+
+        scanner.close();
+    }
+}
